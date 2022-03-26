@@ -90,22 +90,21 @@ public class CatFactsApi {
         //collect the response into a java object using the classes you just created
         CatWrapper catWrappers = getCatFact();
 
-        //take the first Result in the array
-
+        //Take the first Result in the array
+        //There is no array in this
 
         //get the first article
-        List<String> Fact = catWrappers.getData();
+        List<String> fact = catWrappers.getData();
 
         //get the title of the article
-        String bookLink = result.getLink();
+        String message = fact.get(0);
 
         //create the message
-        String message =
-                bookTitle + " -\n"
-                        + bookLink;
+
 
         //return the message
         return message;
+
     }
 
     public void setWebClient(WebClient webClient) {
