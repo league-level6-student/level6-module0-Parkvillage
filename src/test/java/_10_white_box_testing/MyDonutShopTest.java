@@ -19,12 +19,15 @@ class MyDonutShopTest {
 
     @BeforeEach
     void setUp() {
+        MockitoAnnotations.openMocks(this);
 
+        
     }
 
     @Test
     void itShouldTakeDeliveryOrder() throws Exception {
         //given
+
 
         //when
 
