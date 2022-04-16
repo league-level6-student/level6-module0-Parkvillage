@@ -7,6 +7,8 @@ import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
+import javax.swing.*;
+
 /*
 Most APIs require that you provide some sort of proof that you have access to that service.  This can be accomplished
 in many ways, but typically it is done through providing a secret token each time you make a request.  The token is usually
@@ -58,6 +60,7 @@ public class NewsApi {
         System.out.println(response);
     }
 
+
     public ApiExampleWrapper getNewsStoryByTopic(String topic) {
         ApiExampleWrapper apiExampleWrapper = webClient.get()
                 .uri(uriBuilder -> uriBuilder
@@ -102,6 +105,5 @@ public class NewsApi {
     public void setWebClient(WebClient webClient) {
         this.webClient = webClient;
     }
-
 }
 

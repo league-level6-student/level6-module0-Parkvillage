@@ -80,8 +80,11 @@ class MyDonutShopTest {
         when(bakeryService.getDonutsRemaining()).thenReturn(1);
 
         //when
+        myDonutShop.openForTheDay();
 
         //then
+        Throwable throwable = assertThrows(IllegalArgumentException.class,()->myDonutShop.takeOrder(order));
+        assertEquals(throwable.getMessage(),"We are not open for business right now");
     }
 
 }

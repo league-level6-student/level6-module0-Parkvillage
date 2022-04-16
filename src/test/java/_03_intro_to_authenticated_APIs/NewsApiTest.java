@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.http.HttpMethod;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClient.RequestHeadersSpec;
 import org.springframework.web.reactive.function.client.WebClient.RequestHeadersUriSpec;
@@ -26,9 +27,16 @@ import static org.mockito.Mockito.*;
 class NewsApiTest {
 
     NewsApi newsApi;
+    @Mock
+    WebClient webClient;
 
     @BeforeEach
     void setUp() {
+
+        MockitoAnnotations.openMocks(this);
+        newsApi = new NewsApi();
+        webClient = new WebClient() {
+           
 
     }
 
