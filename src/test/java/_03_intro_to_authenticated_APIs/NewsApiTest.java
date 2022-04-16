@@ -36,7 +36,7 @@ class NewsApiTest {
         MockitoAnnotations.openMocks(this);
         newsApi = new NewsApi();
         webClient = new WebClient() {
-           
+
 
     }
 
@@ -46,7 +46,7 @@ class NewsApiTest {
 
         //when
 
-        //then
+        //then im 
     }
 
     @Test
